@@ -9,25 +9,45 @@
 
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-
+import {Titol} from './components/Titol/Titol';
+import {LlistaPersonatges} from './components/LlistaPersonatges/LlistaPersonatges';
+import {Central} from './components/Central/Central';
 
 export default class App extends Component {
   render() {
     return (
-      <View style={{flex: 1}}>
-        <Text style={styles.estilTitol}> Benvingut a l'examen</Text>
-        <Text style={{fontFamily: 'evanescent', color: 'red', fontSize: 70}}>
-          Molta Sort!!
-        </Text>
+      <View style={styles.contenidor}>
+        <Titol style={styles.capsalera} />
+        <Central style={styles.cosCentral} />
+        <LlistaPersonatges style={styles.selectorPersonatges} />
       </View>
     );
   }
 }
 const styles = StyleSheet.create({
+  contenidor: {
+    flex: 1,
+    flexDirection: 'column',
+  },
+  capsalera: {
+    borderColor: 'red',
+    borderWidth: 3,
+    margin: 1,
+  },
   estilTitol: {
     fontFamily: 'evanescent',
     fontSize: 60,
   },
-  cosCentral: {},
-  selectorPersonatges: {},
+  cosCentral: {
+    flex: 2,
+    borderColor: 'blue',
+    borderWidth: 3,
+    margin: 1,
+  },
+  selectorPersonatges: {
+    flex: 1,
+    borderColor: 'green',
+    borderWidth: 3,
+    margin: 1,
+  },
 });

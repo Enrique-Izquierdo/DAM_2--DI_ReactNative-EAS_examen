@@ -17,8 +17,7 @@ export class Titol extends Component {
     return (
       <View style={styles.caixaTitol}>
         <Text>
-          { /* Cal omplir este component amb les propietats rebudes */
-          }
+          {/* Cal omplir este component amb les propietats rebudes */}
         </Text>
         <Text> By POSEU EL VOSTRE NOM! i feu que es pose a la dreta</Text>
       </View>
