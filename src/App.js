@@ -17,8 +17,8 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.contenidor}>
-        <Titol style={styles.capsalera} />
-        <Central style={styles.cosCentral} />
+        <Titol text="Sword Art Online" estil={styles.estilTitol} />
+        <Central />
         <LlistaPersonatges style={styles.selectorPersonatges} />
       </View>
     );
@@ -28,26 +28,12 @@ const styles = StyleSheet.create({
   contenidor: {
     flex: 1,
     flexDirection: 'column',
-  },
-  capsalera: {
-    borderColor: 'red',
+    borderColor: 'black',
     borderWidth: 3,
     margin: 1,
   },
   estilTitol: {
     fontFamily: 'evanescent',
     fontSize: 60,
-  },
-  cosCentral: {
-    flex: 2,
-    borderColor: 'blue',
-    borderWidth: 3,
-    margin: 1,
-  },
-  selectorPersonatges: {
-    flex: 1,
-    borderColor: 'green',
-    borderWidth: 3,
-    margin: 1,
   },
 });

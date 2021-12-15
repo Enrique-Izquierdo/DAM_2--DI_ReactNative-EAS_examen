@@ -1,12 +1,56 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, StyleSheet, ScrollView} from 'react-native';
+import {personatges} from '../../Utils/Dades';
+import {TitolDada} from '../TitolDada/TitolDada';
 
 export class Central extends Component {
-    render() {
-        return (
-            <View>
-                <Text>Componente central</Text>
-            </View>
-        );
-    }
+  render() {
+    return (
+      <View style={styles.cosCentral}>
+        <ScrollView vertical={true}>
+          {personatges.map((item, pos) => {
+            return (
+              <View style={styles.text}>
+                <Text>{personatges[pos].nom}</Text>
+                <TitolDada
+                  titol="COLOR MONYO"
+                  dada={personatges[pos].colorMonyo}
+                />
+                <TitolDada
+                  titol="ANIVERSARI"
+                  dada={personatges[pos].dades.aniversari}
+                />
+                <TitolDada
+                  titol="DESCRIPCIO"
+                  dada={personatges[pos].dades.descripcio}
+                />
+              </View>
+            );
+          })}
+          {/* <Text>Componente central</Text> */}
+        </ScrollView>
+      </View>
+    );
+  }
 }
+
+const styles = StyleSheet.create({
+  cosCentral: {
+    flex: 2,
+    borderColor: 'blue',
+    borderWidth: 3,
+    margin: 1,
+  },
+  text: {
+    color: 'black',
+    fontSize: 22,
+  },
+  titol: {
+    fontSize: 25,
+    fontFamily: 'evanescent',
+  },
+  dada: {
+    color: 'black',
+    fontSize: 18,
+  },
+});

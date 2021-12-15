@@ -17,14 +17,16 @@ export class TitolDada extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text></Text>
-        <Text></Text>
+        <Text style={styles.titol}>{this.props.titol}: </Text>
+        <Text style={styles.dada}>{this.props.dada}</Text>
       </View>
     );
   }
 }
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    flexDirection: 'row',
     padding: 5,
   },
   titol: {

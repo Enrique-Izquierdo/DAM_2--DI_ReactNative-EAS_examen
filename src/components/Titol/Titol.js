@@ -16,10 +16,8 @@ export class Titol extends Component {
   render() {
     return (
       <View style={styles.caixaTitol}>
-        <Text>
-          {/* Cal omplir este component amb les propietats rebudes */}
-        </Text>
-        <Text> By POSEU EL VOSTRE NOM! i feu que es pose a la dreta</Text>
+        <Text style={this.props.estil}>{this.props.text}</Text>
+        <Text style={{textAlign: 'right'}}> By Enrique Izquierdo</Text>
       </View>
     );
   }
@@ -29,5 +27,7 @@ const styles = StyleSheet.create({
     //Acabeu d'omplir l'estil
     margin: 5,
     alignItems: 'center',
+    borderColor: 'red',
+    borderWidth: 3,
   },
 });

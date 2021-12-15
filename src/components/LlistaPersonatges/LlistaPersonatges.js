@@ -9,19 +9,35 @@
  */
 
 import React, {Component} from 'react';
-import {StyleSheet, ScrollView} from 'react-native';
+import {View, StyleSheet, ScrollView} from 'react-native';
 import {personatges} from '../../Utils/Dades';
+import {UnElementLlistaPersonatges} from '../UnElementLlistaPersonatges/UnElementLlistaPersonatges';
 
 export class LlistaPersonatges extends Component {
   render() {
     return (
-      <ScrollView horizontal={true}>
-        {/* Ací has de recorrer l'array de personatges
-            i per a cada element cridar al component que et mostra
-            un element de la llista de personatges
-          */}
-      </ScrollView>
+      <View style={styles.selectorPersonatges}>
+        <ScrollView horizontal={true}>
+          {/* <UnElementLlistaPersonatges /> */}
+          {personatges.map((item, pos) => {
+            return (
+              <UnElementLlistaPersonatges
+                key={pos}
+                imatge={personatges[pos].imatge}
+                nom={personatges[pos].nom}
+              />
+            );
+          })}
+        </ScrollView>
+      </View>
     );
   }
 }
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  selectorPersonatges: {
+    flex: 1,
+    borderColor: 'green',
+    borderWidth: 3,
+    margin: 1,
+  },
+});
