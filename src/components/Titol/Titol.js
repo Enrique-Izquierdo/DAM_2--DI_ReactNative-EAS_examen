@@ -17,7 +17,7 @@ export class Titol extends Component {
     return (
       <View style={styles.caixaTitol}>
         <Text style={this.props.estil}>{this.props.text}</Text>
-        <Text style={{textAlign: 'right'}}> By Enrique Izquierdo</Text>
+        <Text style={{alignSelf: 'flex-end'}}> By Enrique Izquierdo</Text>
       </View>
     );
   }

@@ -19,7 +19,7 @@ export default class App extends Component {
       <View style={styles.contenidor}>
         <Titol text="Sword Art Online" estil={styles.estilTitol} />
         <Central />
-        <LlistaPersonatges style={styles.selectorPersonatges} />
+        <LlistaPersonatges />
       </View>
     );
   }

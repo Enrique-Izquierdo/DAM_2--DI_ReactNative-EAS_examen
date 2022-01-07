@@ -18,7 +18,9 @@ export class TitolDada extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.titol}>{this.props.titol}: </Text>
-        <Text style={styles.dada}>{this.props.dada}</Text>
+        <View style={{flex: 1, margin: 5}}>
+          <Text style={styles.dada}>{this.props.dada}</Text>
+        </View>
       </View>
     );
   }
@@ -28,6 +30,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     padding: 5,
+    flexWrap: 'wrap',
   },
   titol: {
     fontSize: 25,

@@ -11,19 +11,10 @@ export class Central extends Component {
           {personatges.map((item, pos) => {
             return (
               <View style={styles.text}>
-                <Text>{personatges[pos].nom}</Text>
-                <TitolDada
-                  titol="COLOR MONYO"
-                  dada={personatges[pos].colorMonyo}
-                />
-                <TitolDada
-                  titol="ANIVERSARI"
-                  dada={personatges[pos].dades.aniversari}
-                />
-                <TitolDada
-                  titol="DESCRIPCIO"
-                  dada={personatges[pos].dades.descripcio}
-                />
+                <Text>{item.nom}</Text>
+                <TitolDada titol="COLOR MONYO" dada={item.colorMonyo} />
+                <TitolDada titol="ANIVERSARI" dada={item.dades.aniversari} />
+                <TitolDada titol="DESCRIPCIO" dada={item.dades.descripcio} />
               </View>
             );
           })}

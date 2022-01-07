@@ -23,8 +23,8 @@ export class LlistaPersonatges extends Component {
             return (
               <UnElementLlistaPersonatges
                 key={pos}
-                imatge={personatges[pos].imatge}
-                nom={personatges[pos].nom}
+                imatge={item.imatge}
+                nom={item.nom}
               />
             );
           })}
